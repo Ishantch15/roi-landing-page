@@ -189,227 +189,329 @@ const styles = `
   }
 
   /* ===================== HERO SECTION ===================== */
-  .hero {
-    background: #0f172a;
-    color: white;
-    overflow: visible;
-    padding: 60px 0 0;
-    position: relative;
-    width: 100%;
-  }
+/* ===================== HERO SECTION ===================== */
+.hero {
+  background: #0f172a;
+  color: white;
+  overflow: visible;
+  padding: 80px 0 0;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 
-  .hero::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(ellipse 80% 60% at 50% 100%, rgba(255,102,0,0.12) 0%, transparent 70%),
-                radial-gradient(ellipse 40% 40% at 20% 20%, rgba(255,153,51,0.06) 0%, transparent 60%);
-    pointer-events: none;
-  }
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 50% at 50% 0%, rgba(255,102,0,0.18) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 60% at 80% 60%, rgba(255,153,51,0.07) 0%, transparent 60%),
+    radial-gradient(ellipse 30% 40% at 15% 80%, rgba(255,102,0,0.06) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
 
-  .hero::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image:
-      linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
-    background-size: 60px 60px;
-    pointer-events: none;
-  }
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+  background-size: 80px 80px;
+  pointer-events: none;
+  z-index: 0;
+}
 
-  @media (min-width: 768px) {
-    .hero {
-      padding: 80px 64px 0;
-    }
-  }
+.hero-inner {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 24px 160px;
+  position: relative;
+  z-index: 1;
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+}
 
-  .hero-grid {
-    max-width: 1280px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 0;
-    align-items: center;
-    position: relative;
-    z-index: 1;
+@media (min-width: 768px) {
+  .hero-inner {
+    padding: 80px 64px 180px;
   }
+}
 
-  .hero-left {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    text-align: center;
-    align-items: center;
-  }
+.hero-eyebrow-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
 
-  .hero-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 8px 20px;
-    border-radius: 9999px;
-    background: rgba(255, 102, 0, 0.12);
-    color: #ff9933;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    border: 1px solid rgba(255, 102, 0, 0.25);
-    width: fit-content;
-    opacity: 0;
-    transform: translateY(16px);
-    animation: fadeSlideUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.2s forwards;
-  }
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+  border-radius: 9999px;
+  background: rgba(255, 102, 0, 0.12);
+  color: #ff9933;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 102, 0, 0.25);
+  opacity: 0;
+  transform: translateY(16px);
+  animation: fadeSlideUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.2s forwards;
+}
 
-  .hero-badge::before {
-    content: '';
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: #ff6600;
-    display: inline-block;
-    animation: pulse 2s ease-in-out infinite;
-  }
+.hero-badge::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ff6600;
+  display: inline-block;
+  animation: pulse 2s ease-in-out infinite;
+}
 
-  @keyframes pulse {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.5; transform: scale(0.7); }
-  }
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.7); }
+}
 
+.hero-h1 {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.2;
+  max-width: 820px;
+  margin: 0 auto 24px;
+  letter-spacing: -1px;
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+
+@media (min-width: 768px) {
   .hero-h1 {
-    font-size: 38px;
-    font-weight: 700;
-    line-height: 1.2;
-    max-width: 700px;
+    font-size: 62px;
   }
+}
 
-  @media (min-width: 768px) {
-    .hero-h1 {
-      font-size: 50px;
-      max-width: 800px;
-    }
+@media (min-width: 1100px) {
+  .hero-h1 {
+    font-size: 52px;
   }
+}
 
-  .hero-letter {
-    display: inline-block;
-    opacity: 0;
-    transform: translateY(30px);
-    animation: letterReveal 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-  }
+.hero-letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: letterReveal 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
 
-  @keyframes letterReveal {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+@keyframes letterReveal {
+  to { opacity: 1; transform: translateY(0); }
+}
 
-  .hero-letter.orange {
-    color: #ff6600;
-    font-style: italic;
-  }
+.hero-letter.orange {
+  color: #ff6600;
+  font-style: italic;
+}
 
-  .hero-letter.space {
-    width: 0.25em;
-  }
+.hero-letter.space {
+  width: 0.25em;
+}
 
-  .hero-word {
-    display: inline-block;
-    opacity: 0;
-    transform: translateY(40px) rotateX(-20deg);
-    transform-origin: top center;
-    animation: wordReveal 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-    margin-right: 0.22em;
-  }
+.hero-subtitle {
+  font-size: 18px;
+  color: rgba(255,255,255,0.55);
+  max-width: 580px;
+  margin: 0 auto 36px;
+  line-height: 1.75;
+  opacity: 0;
+  transform: translateY(20px);
+}
 
-  .hero-word:last-child {
-    margin-right: 0;
-  }
+.hero-subtitle.visible {
+  animation: fadeSlideUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
 
-  @keyframes wordReveal {
-    0% { opacity: 0; transform: translateY(40px) rotateX(-20deg); }
-    60% { opacity: 1; }
-    100% { opacity: 1; transform: translateY(0) rotateX(0deg); }
-  }
+@keyframes fadeSlideUp {
+  to { opacity: 1; transform: translateY(0); }
+}
 
-  .hero-word.orange {
-    color: #ff6600;
-    position: relative;
-  }
+.hero-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 48px;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(20px);
+}
 
-  .hero-word.orange::after {
-    content: '';
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-    width: 0;
-    height: 3px;
-    background: linear-gradient(90deg, #ff6600, #ff9933);
-    border-radius: 2px;
-    transition: width 0.4s ease 0.2s;
-  }
+.hero-buttons.visible {
+  animation: fadeSlideUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
 
-  .hero-word.orange.underline-visible::after {
-    width: 100%;
-  }
-
-  .hero-word.italic {
-    font-style: italic;
-    color: #ff9933;
-  }
-
-  .hero-subtitle {
-    font-size: 18px;
-    color: rgba(255,255,255,0.65);
-    max-width: 560px;
-    line-height: 1.7;
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  .hero-subtitle.visible {
-    animation: fadeSlideUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-  }
-
-  @keyframes fadeSlideUp {
-    to { opacity: 1; transform: translateY(0); }
-  }
-
+@media (min-width: 640px) {
   .hero-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    padding-top: 8px;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transform: translateY(20px);
+    flex-direction: row;
   }
+}
 
-  .hero-buttons.visible {
-    animation: fadeSlideUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+.hero-stats {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.hero-stats.visible {
+  animation: fadeSlideUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero-stat-pill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 9999px;
+  padding: 10px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.75);
+  transition: all 0.3s;
+}
+
+.hero-stat-pill:hover {
+  background: rgba(255,102,0,0.1);
+  border-color: rgba(255,102,0,0.3);
+  color: white;
+}
+
+.hero-stat-pill-num {
+  color: #ff9933;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+/* ---- floating image overlap ---- */
+.hero-img-wrap {
+  position: relative;
+  z-index: 2;
+  width: calc(100% - 48px);
+  max-width: 1200px;
+  margin: -140px auto 0;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .hero-img-wrap {
+    width: calc(100% - 128px);
+    margin-top: -180px;
   }
+}
 
-  @media (min-width: 640px) {
-    .hero-buttons {
-      flex-direction: row;
-    }
+.hero-img-frame {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.08),
+    0 40px 80px rgba(0,0,0,0.6),
+    0 8px 32px rgba(255,102,0,0.12);
+  opacity: 0;
+  transform: translateY(60px) scale(0.97);
+  animation: imgReveal 1.1s cubic-bezier(0.22, 1, 0.36, 1) 1.2s forwards;
+}
+
+@media (min-width: 768px) {
+  .hero-img-frame {
+    border-radius: 28px;
   }
+}
 
-  .hero-stats {
-    display: flex;
-    gap: 24px;
-    justify-content: center;
-    flex-wrap: wrap;
-    opacity: 0;
-    transform: translateY(16px);
-  }
+@keyframes imgReveal {
+  0%   { opacity: 0; transform: translateY(60px) scale(0.97); }
+  60%  { opacity: 1; }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
 
-  .hero-stats.visible {
-    animation: fadeSlideUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-  }
+.hero-img-frame img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
 
+/* top fade so image bleeds into hero bg */
+.hero-img-frame::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 120px;
+  background: linear-gradient(to bottom, #0f172a 0%, transparent 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* subtle orange reflection bar at bottom edge */
+.hero-img-frame::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 5%; right: 5%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(255,102,0,0.6), transparent);
+  z-index: 3;
+}
+
+/* browser chrome bar */
+.hero-img-chrome {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 36px;
+  background: rgba(15,23,42,0.95);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  gap: 8px;
+  z-index: 4;
+}
+
+.hero-img-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.hero-img-bar {
+  flex: 1;
+  height: 20px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 9999px;
+  margin: 0 12px;
+}
+
+/* scroll-driven parallax */
+.hero-img-parallax {
+  will-change: transform;
+  transition: transform 0.05s linear;
+}
   .hero-stat-pill {
     display: flex;
     align-items: center;
@@ -1423,6 +1525,10 @@ const styles = `
     gap: 32px;
   }
 
+
+.result-num.counting {
+  transition: all 0.1s ease;
+}
   .result-num {
     font-size: 48px;
     font-weight: 800;
@@ -2350,7 +2456,47 @@ function useInView(threshold = 0.2) {
 
   return [ref, inView];
 }
+function useCountUp(target, decimals = 0, duration = 1800, threshold = 0.3) {
+  const ref = useRef(null);
+  const [value, setValue] = useState(0);
+  const hasRun = useRef(false);
 
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const steps = 60;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasRun.current) {
+          hasRun.current = true;
+          let step = 0;
+          const interval = setInterval(() => {
+            step++;
+            const progress = step / steps;
+            const eased = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+            setValue(parseFloat((eased * target).toFixed(decimals)));
+            if (step >= steps) clearInterval(interval);
+          }, duration / steps);
+        }
+      },
+      { threshold }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [target, decimals, duration, threshold]);
+
+  return [ref, value];
+}
+
+function CountUp({ target, decimals = 0, prefix = '', suffix = '', duration = 1800, className = '', style = {} }) {
+  const [ref, value] = useCountUp(target, decimals, duration);
+  const display = decimals > 0 ? value.toFixed(decimals) : Math.round(value);
+  return (
+    <span ref={ref} className={className} style={style}>
+      {prefix}{display}{suffix}
+    </span>
+  );
+}
 const comparisonRows = [
   { feature: 'Optimization Focus', trad: 'Keywords & Rankings', roi: 'AI Answers & Revenue ROI', free: 'Basic On-Page' },
   { feature: 'Search Channels', trad: 'Google & Bing', roi: 'Google, ChatGPT, Gemini, Perplexity', free: 'Google Only' },
@@ -2368,7 +2514,42 @@ export default function ROISpectrum() {
   const [statsVisible, setStatsVisible] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
   const { toasts, addToast, removeToast } = useToast();
+  const resultsRef = useRef(null);
+  const [animatedValues, setAnimatedValues] = useState([0, 0, 0, 0]);
+  const hasAnimated = useRef(false);
 
+  useEffect(() => {
+    const el = resultsRef.current;
+    if (!el) return;
+
+    const targets = [2.5, 3, 30, 100];
+    const decimals = [1, 0, 0, 0];
+    const duration = 1800;
+    const steps = 60;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasAnimated.current) {
+          hasAnimated.current = true;
+          let step = 0;
+          const interval = setInterval(() => {
+            step++;
+            const progress = step / steps;
+            // easeOutExpo easing
+            const eased = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+            setAnimatedValues(
+              targets.map(t => parseFloat((eased * t).toFixed(decimals[targets.indexOf(t)])))
+            );
+            if (step >= steps) clearInterval(interval);
+          }, duration / steps);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
   useJivoChat();
 
   useEffect(() => {
@@ -2461,29 +2642,63 @@ export default function ROISpectrum() {
 
       <main>
         {/* HERO SECTION - UNCHANGED */}
+        {/* HERO + OVERLAPPING IMAGE */}
         <section className="hero">
-          <div className="hero-grid">
-            <div className="hero-left">
-              <h1 className="hero-h1">
-                <AnimatedHeadline />
-              </h1>
+          <div className="hero-inner">
+            <div className="hero-badge">
+              FUTURE-PROOF SEARCH DOMINANCE
+            </div>
 
-              <p className={`hero-subtitle${subtitleVisible ? ' visible' : ''}`}>
-                Traditional SEO is evolving. We help brands master the new Experience of Search Generative Experience And AI driven discovery to drive high intent conversion.
-              </p>
+            <h1 className="hero-h1">
+              <AnimatedHeadline />
+            </h1>
 
-              <div className={`hero-buttons${buttonsVisible ? ' visible' : ''}`}>
-                <button className="btn-main" onClick={openModal}>Start Your Free Audit ↗</button>
-                <button className="btn-secondary">View Case Studies</button>
+            <p className={`hero-subtitle${subtitleVisible ? ' visible' : ''}`}>
+              Traditional SEO is evolving. We help brands master Search Generative Experience and AI-driven discovery to drive high-intent conversion.
+            </p>
+
+            <div className={`hero-buttons${buttonsVisible ? ' visible' : ''}`}>
+              <button className="btn-main" onClick={openModal}>Start Your Free Audit ↗</button>
+              <button className="btn-secondary">View Case Studies</button>
+            </div>
+
+            {/* <div className="hero-stat-pill">
+              <CountUp target={4000} suffix="+" className="hero-stat-pill-num" /> Brands Grown
+            </div>
+            <div className="hero-stat-pill">
+              <CountUp target={2.5} decimals={1} suffix="×" className="hero-stat-pill-num" /> Avg Lead Growth
+            </div>
+            <div className="hero-stat-pill">
+              <CountUp target={3} prefix="Top " className="hero-stat-pill-num" /> AEO Placement
+            </div> */}
+          </div>
+
+          {/* Overlapping dashboard image */}
+          <div className="hero-img-wrap">
+            <div
+              className="hero-img-frame hero-img-parallax"
+              ref={el => {
+                if (!el) return;
+                const onScroll = () => {
+                  const y = window.scrollY;
+                  el.style.transform = `translateY(${y * 0.12}px)`;
+                };
+                window.addEventListener('scroll', onScroll, { passive: true });
+              }}
+            >
+              <div className="hero-img-chrome">
+                <div className="hero-img-dot" style={{ background: '#ff5f57' }} />
+                <div className="hero-img-dot" style={{ background: '#ffbd2e' }} />
+                <div className="hero-img-dot" style={{ background: '#28c840' }} />
+                <div className="hero-img-bar" />
               </div>
+              <img
+                src={background}
+                alt="ROI Spectrum Dashboard"
+                style={{ marginTop: '36px' }}
+              />
             </div>
           </div>
-        </section>
-
-        {/* Dashboard Gallery */}
-        <section className="dashboard-gallery">
-          <img src={background} alt="Dashboard 1" className="gallery-image"
-            style={{ width: '100%', display: 'block', objectFit: 'cover' }} />
         </section>
 
         {/* CHALLENGES - REDESIGNED */}
@@ -2582,11 +2797,11 @@ export default function ROISpectrum() {
                 </p>
                 <div className="stat-grid">
                   <div className="stat-box">
-                    <div className="stat-num">40%</div>
+                    <div className="stat-num"><CountUp target={40} suffix="%" /></div>
                     <div className="stat-label">Decrease in Traditional CTR</div>
                   </div>
                   <div className="stat-box">
-                    <div className="stat-num">65%</div>
+                    <div className="stat-num"><CountUp target={65} suffix="%" /></div>
                     <div className="stat-label">Users Trust AI Answers</div>
                   </div>
                 </div>
@@ -2634,16 +2849,16 @@ export default function ROISpectrum() {
                     <h3 className="case-title">Luna Visuals: 350% Growth in Inbound Leads</h3>
                     <p className="case-desc">Pivoting from traditional SEO to an AEO-first approach captured high-intent traffic across all major AI search platforms.</p>
                   </div>
-                  <div className="metrics">
-                    <div className="metric">
-                      <div className="metric-num">+350%</div>
-                      <div className="metric-label">Leads Growth</div>
-                    </div>
-                    <div className="metric">
-                      <div className="metric-num">-40%</div>
-                      <div className="metric-label">CPA Reduction</div>
-                    </div>
+                  <div className="metric">
+                    <div className="metric-num"><CountUp target={350} prefix="+" suffix="%" /></div>
+                    <div className="metric-label">Leads Growth</div>
                   </div>
+                  <div className="metric">
+                    <div className="metric-num"><CountUp target={40} prefix="-" suffix="%" /></div>
+                    <div className="metric-label">CPA Reduction</div>
+                  </div>
+
+
                 </div>
               </div>
             </div>
@@ -2735,19 +2950,26 @@ export default function ROISpectrum() {
                   ))}
                 </div>
               </div>
-
               <div className="results-box">
                 <h2 style={{ fontSize: '32px', fontWeight: 800 }}>What Results <br /><span className="italic-orange">Can You Expect?</span></h2>
 
                 <div className="results-grid">
                   {[
-                    { num: '2.5x', label: 'Avg. Lead Growth (Year 1)' },
-                    { num: 'Top 3', label: 'AEO Visibility Positioning' },
-                    { num: '30%', label: 'Reduction in Paid CPA' },
-                    { num: '100%', label: 'Transparency Reporting' }
+                    { target: 2.5, decimals: 1, suffix: 'x', label: 'Avg. Lead Growth (Year 1)' },
+                    { target: 3, prefix: 'Top ', suffix: '', label: 'AEO Visibility Positioning' },
+                    { target: 30, suffix: '%', label: 'Reduction in Paid CPA' },
+                    { target: 100, suffix: '%', label: 'Transparency Reporting' },
                   ].map((item, i) => (
                     <div key={i}>
-                      <div className="result-num">{item.num}</div>
+                      <div className="result-num">
+                        <CountUp
+                          target={item.target}
+                          decimals={item.decimals || 0}
+                          prefix={item.prefix || ''}
+                          suffix={item.suffix}
+                          duration={2000}
+                        />
+                      </div>
                       <div className="result-label">{item.label}</div>
                     </div>
                   ))}
