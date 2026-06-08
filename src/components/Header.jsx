@@ -12,31 +12,34 @@ export default function Header({ scrollY, mobileMenuOpen, setMobileMenuOpen, ope
             display: 'flex',
             flexDirection: 'column',
             borderLeft: '2px solid rgba(255, 102, 0, 0.3)',
-            paddingLeft: '16px',
+            paddingLeft: '12px',
           }}>
             <span style={{
-              fontSize: '10px',
-              fontWeight: 700,
-              letterSpacing: '1.5px',
+              fontSize: 'clamp(7px, 1.8vw, 10px)',
+              fontWeight: 600,
+              letterSpacing: '0.8px',
               textTransform: 'uppercase',
-              color: '#1a1a1a',
+              color: '#888',
               fontFamily: 'Arial, sans-serif',
               lineHeight: 1.2,
+              whiteSpace: 'nowrap',
+              display: 'block',
             }}>
-              Revenue Driven For Our Clients
+              <span className="revenue-label-full">Revenue Driven For Our Clients</span>
+              <span className="revenue-label-short" style={{ display: 'none' }}>Revenue Driven</span>
             </span>
             <span style={{
-              fontSize: '20px',
-              fontWeight: 500,
+              fontSize: 'clamp(13px, 2.5vw, 20px)',
+              fontWeight: 700,
               color: '#ff6600',
               fontFamily: 'Arial, sans-serif',
               letterSpacing: '-0.5px',
               lineHeight: 1.3,
+              whiteSpace: 'nowrap',
             }}>
               $10,085,355+
             </span>
-          </div>
-        </div>
+          </div>        </div>
 
         <div className="roi-header-cta">
           <button className="roi-btn roi-btn-primary" onClick={openModal}>Get a Free Audit</button>

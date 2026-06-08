@@ -1,6 +1,6 @@
 const comparisonRows = [
   { feature: 'Optimization Focus', trad: 'Keywords & Rankings', roi: 'AI Answers & Revenue ROI', free: 'Basic On-Page' },
-  { feature: 'Search Channels', trad: 'Google & Bing', roi: 'Google, ChatGPT, Gemini, Perplexity', free: 'Google Only' },
+  { feature: 'Search Channels', trad: 'Google & Bing', roi: 'Google, ChatGPT, Gemini', free: 'Google Only' },
   { feature: 'Transparency', trad: 'Monthly Static PDF', roi: 'Real-Time Project Dashboard', free: 'Inconsistent Email' },
   { feature: 'Implementation', trad: '"Advice" Only', roi: 'Hands-on Technical Execution', free: 'Scope Limited' },
   { feature: 'Strategic Level', trad: 'Junior-Managed', roi: 'Senior-Only Leadership', free: 'Varies Greatly' },

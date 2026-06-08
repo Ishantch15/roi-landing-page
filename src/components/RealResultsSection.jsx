@@ -54,7 +54,7 @@ export default function RealResultsSection() {
               <h4 style={{ fontWeight: 700, fontSize: '18px', color: '#1a1a1a', marginBottom: '12px', lineHeight: 1.3 }}>
                 {item.title}
               </h4>
-              <p style={{ fontSize: '14px', color: '#666', lineHeight: 1.7 }}>
+              <p style={{ fontSize: '16px', color: '#666', lineHeight: 1.7 }}>
                 {item.desc}
               </p>
             </div>

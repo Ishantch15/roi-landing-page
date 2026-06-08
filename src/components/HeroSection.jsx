@@ -1,7 +1,25 @@
+import { useEffect, useRef } from 'react';
 import background from '../assets/background.jpg';
 import AnimatedHeadline from './AnimatedHeadline';
 
-export default function HeroSection({ subtitleVisible, buttonsVisible, openModal }) {
+export default function HeroSection({ openModal }) {
+  const frameRef = useRef(null);
+
+  useEffect(() => {
+    const el = frameRef.current;
+    if (!el) return;
+    const onScroll = () => {
+      el.style.transform = `translateY(${window.scrollY * 0.12}px)`;
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  const scrollToCaseStudies = () => {
+    const el = document.querySelector('.case-studies');
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section className="hero">
       <div className="hero-inner">
@@ -13,29 +31,19 @@ export default function HeroSection({ subtitleVisible, buttonsVisible, openModal
           <AnimatedHeadline />
         </h1>
 
-        <p className={`hero-subtitle${subtitleVisible ? ' visible' : ''}`}>
+        <p className="hero-subtitle" style={{ opacity: 1, transform: 'none' }}>
           Traditional SEO is evolving. We help brands master Search Generative Experience and AI-driven discovery to drive high-intent conversion.
         </p>
 
-        <div className={`hero-buttons${buttonsVisible ? ' visible' : ''}`}>
+        <div className="hero-buttons" style={{ opacity: 1, transform: 'none' }}>
           <button className="btn-main" onClick={openModal}>Start Your Free Audit ↗</button>
-          <button className="btn-secondary">View Case Studies</button>
+          <button className="btn-secondary" onClick={scrollToCaseStudies}>View Case Studies</button>
         </div>
       </div>
 
       {/* Overlapping dashboard image */}
       <div className="hero-img-wrap">
-        <div
-          className="hero-img-frame hero-img-parallax"
-          ref={el => {
-            if (!el) return;
-            const onScroll = () => {
-              const y = window.scrollY;
-              el.style.transform = `translateY(${y * 0.12}px)`;
-            };
-            window.addEventListener('scroll', onScroll, { passive: true });
-          }}
-        >
+        <div className="hero-img-frame hero-img-parallax" ref={frameRef}>
           <div className="hero-img-chrome">
             <div className="hero-img-dot" style={{ background: '#ff5f57' }} />
             <div className="hero-img-dot" style={{ background: '#ffbd2e' }} />

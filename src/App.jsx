@@ -36,11 +36,7 @@ export default function ROISpectrum() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
-    const t1 = setTimeout(() => setSubtitleVisible(true), 1800);
-    const t2 = setTimeout(() => setButtonsVisible(true), 2100);
-    return () => { clearTimeout(t1); clearTimeout(t2); };
-  }, []);
+  useEffect(() => { }, []);
 
   useEffect(() => {
     if (modalOpen) {

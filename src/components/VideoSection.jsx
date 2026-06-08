@@ -24,7 +24,7 @@ export default function VideoSection() {
             color: '#1a1a1a',
             lineHeight: 1.15,
             letterSpacing: '-1px',
-            fontFamily: "'Plus Jakarta Sans', sans-serif",
+            fontFamily: "Arial,  sans-serif",
           }}>
             Smarter SEO Real Results
           </h2>
@@ -35,7 +35,7 @@ export default function VideoSection() {
             fontStyle: 'italic',
             lineHeight: 1.15,
             letterSpacing: '-1px',
-            fontFamily: "'Plus Jakarta Sans', sans-serif",
+            fontFamily: "Arial,  sans-serif",
           }}>
             See It in Action.
           </h2>
