@@ -146,7 +146,12 @@ export default function AuditForm({ onSubmit }) {
       >
         {loading ? 'Submitting…' : 'Submit For Free Audit ✉'}
       </button>
-      <p className="form-disclaimer">By submitting, you agree to our Terms &amp; Privacy Policy.</p>
+      <p className="form-disclaimer">
+        By submitting, you agree to our{' '}
+        <a href="https://roispectrum.com/terms-and-conditions" target="_blank" rel="noopener noreferrer">Terms</a>
+        {' '}&amp;{' '}
+        <a href="https://roispectrum.com/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.
+      </p>
     </div>
   );
 }

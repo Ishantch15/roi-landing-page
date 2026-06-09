@@ -9,25 +9,45 @@ export default function ChallengesSection() {
     { icon: <Settings size={28} />, title: 'Technical Debt', desc: 'Slow page speeds and mobile friction hurting your organic authority.' },
     { icon: <Brain size={28} />, title: 'Semantic Discord', desc: 'Content that fails to answer the user intent that modern LLMs prioritize.' },
   ];
-
+  const ticker = 'Plan Winning Strategy ✦ Select ROI Proof Strategies ✦ AI Links Recommendations ✦ AI Mode Simulator ✦ Track Performance ✦ Live Results ✦ Own the Team';
+  const repeated = Array(6).fill(ticker).join(' ✦ ');
   return (
-    <section className="challenges">
-      <div className="challenges-container">
-        <div className="section-header">
-          <h2 className="section-h2">Is Your Website <span className="orange">Costing You</span> Customers?</h2>
-          <p className="section-p">Most agencies focus on traffic. We focus on ROI. In the age of AI search, simply "ranking" isn't enough.</p>
-        </div>
-
-        <div className="grid-3">
-          {challenges.map((item, i) => (
-            <div key={i} className="modular-grid-card">
-              <div className="card-icon">{item.icon}</div>
-              <h4 className="card-h4">{item.title}</h4>
-              <p className="card-p">{item.desc}</p>
-            </div>
+    <div>
+      <div style={{ overflow: 'hidden', background: '#fff', padding: '25px 0', borderTop: '1px solid rgba(255,102,0,0.15)', borderBottom: '1px solid rgba(255,102,0,0.15)', marginTop: '0' }}>
+        <style>{`
+          @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+        `}</style>
+        <div style={{
+          display: 'flex', whiteSpace: 'nowrap',
+          animation: 'ticker 80s linear infinite',
+          width: 'max-content',
+        }}>
+          {[repeated, repeated].map((t, i) => (
+            <span key={i} style={{ fontSize: '20px', fontWeight: 600, color: '#1a1a1a', letterSpacing: '0.5px', paddingRight: '48px' }}>
+              {t}
+            </span>
           ))}
         </div>
       </div>
-    </section>
+
+      <section className="challenges">
+        <div className="challenges-container">
+          <div className="section-header">
+            <h2 className="section-h2" style={{ textDecoration: 'none' }}>Is Your Website <span className="orange">Costing You</span> Customers?</h2>
+            <p className="section-p">Most agencies focus on traffic. We focus on ROI. In the age of AI search, simply "ranking" isn't enough.</p>
+          </div>
+
+          <div className="grid-3">
+            {challenges.map((item, i) => (
+              <div key={i} className="modular-grid-card">
+                <div className="card-icon">{item.icon}</div>
+                <h4 className="card-h4">{item.title}</h4>
+                <p className="card-p">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }

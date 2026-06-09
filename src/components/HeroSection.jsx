@@ -57,6 +57,6 @@ export default function HeroSection({ openModal }) {
           />
         </div>
       </div>
-    </section>
+    </section >
   );
 }

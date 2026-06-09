@@ -1,3 +1,4 @@
+import { Code2, ShoppingCart, HeartPulse, Landmark, GraduationCap, Home } from 'lucide-react';
 export default function CaseStudiesSection() {
   const studies = [
     {
@@ -106,6 +107,40 @@ export default function CaseStudiesSection() {
               </a>
             </div>
           ))}
+        </div>
+        {/* INDUSTRIES */}
+        <div style={{ marginTop: '64px' }}>
+          <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, textAlign: 'left', marginBottom: '40px', color: '#1a1a1a' }}>
+            Industries We've <span style={{ color: '#ff6600' }}>Transformed</span>
+          </h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px' }}>
+            {[
+              { icon: <Code2 size={20} color="#ff6600" />, title: 'Technology & SaaS', desc: 'Turning complex solutions into findable, bookable demos' },
+              { icon: <ShoppingCart size={20} color="#ff6600" />, title: 'E-commerce & Retail', desc: 'From browsers to buyers with conversion-focused SEO' },
+              { icon: <HeartPulse size={20} color="#ff6600" />, title: 'Healthcare & Wellness', desc: 'Connecting patients with providers they can trust' },
+              { icon: <Landmark size={20} color="#ff6600" />, title: 'Financial Services', desc: 'Building authority in highly regulated industries' },
+              { icon: <GraduationCap size={20} color="#ff6600" />, title: 'Education & EdTech', desc: 'Reaching learners at every stage of their journey' },
+              { icon: <Home size={20} color="#ff6600" />, title: 'Real Estate', desc: 'Dominating local markets and luxury segments' },
+            ].map((ind, i) => (
+              <div key={i} style={{
+                background: '#fafafa', border: '1px solid #ebebeb', borderRadius: '16px',
+                padding: '24px 20px', transition: 'all 0.3s',
+                display: 'flex', flexDirection: 'column', justifyContent: 'flex-start',
+              }}
+                onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(255,102,0,0.4)'; e.currentTarget.style.boxShadow = '0 8px 24px rgba(255,102,0,0.08)'; }}
+                onMouseLeave={e => { e.currentTarget.style.borderColor = '#ebebeb'; e.currentTarget.style.boxShadow = 'none'; }}
+              >
+                <div style={{
+                  width: '40px', height: '40px', borderRadius: '10px',
+                  background: 'rgba(255,102,0,0.08)', border: '1px solid rgba(255,102,0,0.15)',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  marginBottom: '16px',
+                }}>{ind.icon}</div>
+                <h4 style={{ fontSize: '20px', fontWeight: 700, color: '#1a1a1a', marginBottom: '8px', textAlign: 'left' }}>{ind.title}</h4>
+                <p style={{ fontSize: '16px', color: '#1a1a1a', lineHeight: 1.6, textAlign: 'left' }}>{ind.desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
