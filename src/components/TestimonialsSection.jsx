@@ -79,6 +79,15 @@ export default function TestimonialsSection() {
           <h2 className="section-h2">
             What Our <span className="orange">Client's Say</span> About Us
           </h2>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginTop: '12px', justifyContent: 'center' }}>
+            <div style={{ display: 'flex', gap: '4px' }}>
+              {[...Array(5)].map((_, i) => (
+                <span key={i} style={{ color: '#ff6600', fontSize: '22px' }}>★</span>
+              ))}
+            </div>
+            <span style={{ fontSize: '18px', fontWeight: 700, color: '#1a1a1a' }}>4.8</span>
+            <span style={{ fontSize: '18px', fontWeight: 700, color: '#1a1a1a' }}>/ 5 Rating</span>
+          </div>
         </div>
 
         {/* Outer wrapper clips overflow */}
