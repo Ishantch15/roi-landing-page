@@ -93,7 +93,7 @@ export default function HeroSection({ openModal }) {
         </div>
       </div>
 
-      {/* Overlapping dashboard image */}
+      {/* Overlapping dashboard img */}
       <div className="hero-img-wrap">
         <div className="hero-img-frame hero-img-parallax" ref={frameRef}>
           <div className="hero-img-chrome">
