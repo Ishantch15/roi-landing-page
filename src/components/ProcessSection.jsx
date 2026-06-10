@@ -45,7 +45,7 @@ export default function ProcessSection() {
           <div style={{ flex: '1 1 300px' }}>
             <p style={{ fontSize: '30px', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: '#ff6600', marginBottom: '12px', textAlign: 'left' }}>OUR VALUES</p>
             <p style={{ fontSize: '30px', fontWeight: 700, color: '#1a1a1a', lineHeight: 1.2, textAlign: 'left' }}>
-              We believe in transparency, results-driven strategies, and building lasting partnerships that help your business thrive in the digital landscape.
+              We believe in transparency, result-driven strategies, and building lasting partnerships that help your business thrive in the digital landscape.
             </p>
           </div>
         </div>
