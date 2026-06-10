@@ -76,13 +76,14 @@ export default function HeroSection({ openModal }) {
 
           {/* Text */}
           <span style={{
-            fontSize: '17px',
+            fontSize: 'clamp(11px, 2vw, 17px)',
             fontWeight: 600,
             color: '#ff9933',
             fontFamily: 'Arial, sans-serif',
             letterSpacing: '0.1px',
           }}>
-            125+ Businesses Served In North America, Middle East &amp; Europe
+            <span className="revenue-label-full">125+ Businesses Served In North America, Middle East &amp; Europe</span>
+            <span className="revenue-label-short" style={{ display: 'none' }}>125+ Businesses · US, UK, UAE &amp; CA</span>
           </span>
         </div>
 
