@@ -39,7 +39,7 @@ export default function ChallengesSection() {
             <div style={{ flex: '1 1 300px' }}>
               <p style={{
                 fontSize: 'clamp(24px, 3vw, 36px)',
-                fontWeight: 800,
+                fontWeight: 700,
                 color: '#1a1a1a',
                 lineHeight: 1.25,
                 textAlign: 'left',
