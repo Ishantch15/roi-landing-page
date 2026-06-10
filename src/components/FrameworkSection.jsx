@@ -47,12 +47,12 @@ export default function FrameworkSection({ openModal }) {
   return (
     <section className="framework">
       <div className="framework-container">
-        <div className="section-header" style={{ textAlign: 'left', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '16px', marginBottom: '48px' }}>
+        <div className="section-header" style={{ textAlign: 'left', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '16px', marginBottom: '48px' }}>
           <div>
             <h2 className="section-h2" style={{ textAlign: 'left' }}>Our SEO Mastery <span className="italic-orange">in Action</span></h2>
-            <p className="section-p" style={{ textAlign: 'left', marginTop: '8px' }}>Technical Excellence Meets Creative Strategy</p>
+            <p className="section-p" style={{ textAlign: 'left', marginTop: '8px', marginLeft: '4px' }}>Technical Excellence Meets Creative Strategy</p>
           </div>
-          <button className="roi-btn roi-btn-primary" style={{ padding: '14px 28px', fontSize: '14px', whiteSpace: 'nowrap' }} onClick={openModal}>
+          <button className="roi-btn roi-btn-primary" style={{ padding: '14px 28px', fontSize: '14px', whiteSpace: 'nowrap', flexShrink: 0, marginBottom: '28px' }} onClick={openModal}>
             Start Your SEO Campaign
           </button>
         </div>

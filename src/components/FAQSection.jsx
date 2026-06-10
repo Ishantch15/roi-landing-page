@@ -54,7 +54,7 @@ export default function FAQSection({ openFAQ, toggleFAQ }) {
     <section className="faq">
       <div className="faq-container">
         <div className="section-header">
-          <h2 className="section-h3">Questions? <span className="italic-orange">Answers.</span></h2>
+          <h2 className="section-h3" style={{ marginTop: '-55px' }}>Questions? <span className="italic-orange">Answers.</span></h2>
         </div>
 
         <div className="faq-grid">

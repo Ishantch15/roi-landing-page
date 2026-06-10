@@ -17,7 +17,7 @@ export default function TestimonialsSection() {
   const posRef = useRef(0);
   const isPausedRef = useRef(false);
   const [cardWidth, setCardWidth] = useState(0);
-  const SPEED = 0.6; // px per frame — adjust for faster/slower
+  const SPEED = 0.6; // px per frame - adjust for faster/slower
 
   // Duplicate cards: original + clone for seamless loop
   const allCards = [...testimonials, ...testimonials];
@@ -76,7 +76,7 @@ export default function TestimonialsSection() {
     <section className="testimonials">
       <div className="testimonials-container">
         <div className="section-header">
-          <h2 className="section-h3">
+          <h2 className="section-h3" style={{ marginTop: '-85px' }}>
             What Our <span className="italic-orange">Client's Say</span> About Us
           </h2>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginTop: '12px', justifyContent: 'center' }}>
@@ -86,7 +86,7 @@ export default function TestimonialsSection() {
               ))}
             </div>
             <span style={{ fontSize: '18px', fontWeight: 700, color: '#1a1a1a' }}>4.8</span>
-            <span style={{ fontSize: '18px', fontWeight: 700, color: '#1a1a1a' }}>/ 5 Rating</span>
+            <span style={{ fontSize: '18px', fontWeight: 700, color: '#1a1a1a' }}>Rated</span>
           </div>
         </div>
 

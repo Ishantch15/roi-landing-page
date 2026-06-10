@@ -36,21 +36,21 @@ export default function ChallengesSection() {
           <div style={{ display: 'flex', alignItems: 'stretch', gap: '60px', marginTop: '0', flexWrap: 'wrap' }}>
 
             {/* Left: Text */}
-            <div style={{ flex: '1 1 300px' }}>
+            <div style={{ flex: '1 1 300px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
               <p style={{
-                fontSize: 'clamp(24px, 3vw, 36px)',
+                fontSize: 'clamp(20px, 2.2vw, 28px)',
                 fontWeight: 700,
                 color: '#1a1a1a',
                 lineHeight: 1.25,
                 textAlign: 'left',
                 margin: '0 0 12px 0',
                 letterSpacing: '-0.5px',
+                marginTop: '-55px',
               }}>
-                At Google I/O 2026, Google just announced the biggest overhaul to Search in over 25 years — pivoting from a traditional link-based search engine to an{' '}
-                <span style={{ color: '#ff6600', fontStyle: 'italic' }}>agentic, AI-powered system.</span>
+                At Google I/O 2026, Google just announced the biggest overhaul to Search in over 25 years - pivoting from a traditional link-based search engine to an <span style={{ color: '#ff6600', fontStyle: 'italic' }}>agentic, AI-powered system.</span>
               </p>
               <p style={{ fontSize: '11px', color: '#999', textAlign: 'left', margin: 0 }}>
-                Source: <a href="https://blog.google/products-and-platforms/products/search/search-io-2026/#powerful-ai" target="_blank" rel="noopener noreferrer" style={{ color: '#999', textDecoration: 'underline' }}>Google Blog — Search at I/O 2026</a>
+                Source: <a href="https://blog.google/products-and-platforms/products/search/search-io-2026/#powerful-ai" target="_blank" rel="noopener noreferrer" style={{ color: '#999', textDecoration: 'underline' }}>Google Blog - Search at I/O 2026</a>
               </p>
             </div>
 
@@ -65,7 +65,7 @@ export default function ChallengesSection() {
                 style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', borderRadius: '20px', border: '1px solid rgba(255,102,0,0.15)' }}
               />
               <p style={{ fontSize: '11px', color: '#999', textAlign: 'right', margin: 0 }}>
-                Source: <a href="https://blog.google/products-and-platforms/products/search/search-io-2026/#powerful-ai" target="_blank" rel="noopener noreferrer" style={{ color: '#999', textDecoration: 'underline' }}>Google Blog — Search at I/O 2026</a>
+                Source: <a href="https://blog.google/products-and-platforms/products/search/search-io-2026/#powerful-ai" target="_blank" rel="noopener noreferrer" style={{ color: '#999', textDecoration: 'underline' }}>Google Blog - Search at I/O 2026</a>
               </p>
             </div>
 
@@ -74,10 +74,10 @@ export default function ChallengesSection() {
       </section>
 
       {/* Challenges Section */}
-      <section className="challenges" style={{ marginTop: '-70px' }}>
+      <section className="challenges" style={{ marginTop: '-70px', paddingBottom: '60px' }}>
         <div className="challenges-container">
           <div className="section-header">
-            <h2 className="section-h3" style={{ textDecoration: 'none' }}>Is your Business Ready for <span className="italic-orange">this Change.</span></h2>
+            <h2 className="section-h3" style={{ textDecoration: 'none', marginTop: '-55px' }}>Is your Business ready for <span className="italic-orange">this Change?</span></h2>
             <p className="section-p">Most agencies focus on traffic. We focus on ROI. In the age of AI search, simply "ranking" isn't enough.</p>
           </div>
 

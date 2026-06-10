@@ -59,7 +59,7 @@ export default function AuditForm({ onSubmit }) {
       }
 
       setFormData({ name: '', email: '', phone: '', budget: '' });
-      // Call onSubmit — App.jsx handles the redirect via state
+      // Call onSubmit - App.jsx handles the redirect via state
       if (onSubmit) onSubmit();
     } catch (err) {
       console.error('Submission error:', err);

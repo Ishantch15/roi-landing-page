@@ -105,7 +105,15 @@ const styles = `
       display: none;
     }
   }
-
+@media (max-width: 640px) {
+  .case-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .case-header a {
+    margin-top: 8px !important;
+  }
+}
   .roi-btn {
     padding: 12px 24px;
     border: none;
@@ -276,13 +284,7 @@ const styles = `
   }
 
   .hero-badge::before {
-    content: '';
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: #ff6600;
-    display: inline-block;
-    // animation: pulse 2s ease-in-out infinite;
+    display: none;
   }
 
   @keyframes pulse {
@@ -714,7 +716,7 @@ font-size: 48px;
   /* ===================== FRAMEWORK SECTION ===================== */
   .framework {
     background: #f5f5f5;
-    padding: 120px 24px;
+    padding: 60px 24px 120px;
   }
 
   @media (min-width: 768px) {

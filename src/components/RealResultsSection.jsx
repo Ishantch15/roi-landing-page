@@ -3,7 +3,7 @@ export default function RealResultsSection() {
     {
       stat: '40%',
       title: 'Lower Acquisition Costs',
-      desc: 'Brands that invest in a well-executed SEO strategy see their cost-per-acquisition drop by an average of 40%—all while organic leads keep climbing.'
+      desc: 'Brands that invest in a well-executed SEO strategy see their cost-per-acquisition drop by an average of 40% - all while organic leads keep climbing.'
     },
     {
       stat: '50%',
@@ -13,7 +13,7 @@ export default function RealResultsSection() {
     {
       stat: '10x',
       title: 'Return Within 12 Months',
-      desc: 'Many businesses report seeing a double return on investment in just the first year, proving that quality SEO pays for itself—and then some.'
+      desc: 'Many businesses report seeing a double return on investment in just the first year, proving that quality SEO pays for itself-and then some.'
     },
     {
       stat: '80%',
@@ -26,7 +26,7 @@ export default function RealResultsSection() {
     <section style={{ background: 'white', padding: '120px 24px' }}>
       <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
         <div className="section-header">
-          <h2 className="section-h2">Real Results. Real Savings. </h2>
+          <h2 className="section-h2" style={{ marginTop: '-55px' }}>Real Results. Real Savings. </h2>
         </div>
 
         <div

@@ -25,6 +25,7 @@ export default function VideoSection() {
             lineHeight: 1.15,
             letterSpacing: '-1px',
             fontFamily: "Arial,  sans-serif",
+            marginTop: '-55px',
           }}>
             Smarter SEO. Real Results.
           </h2>

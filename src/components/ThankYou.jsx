@@ -235,7 +235,7 @@ export default function ThankYou({ onGoHome }) {
                 personalise-wholesaleblanks.co.uk: £5.1M Goal Value via Technical & Content SEO
               </h4>
               <p style={{ fontSize: '14px', color: '#555', lineHeight: 1.65, marginBottom: '16px' }}>
-                Technical fixes, entity-rich on-page updates, and internal linking grew organic impressions by +823.99K and clicks by +16.75K — with 6,200 conversions driven in the period.
+                Technical fixes, entity-rich on-page updates, and internal linking grew organic impressions by +823.99K and clicks by +16.75K - with 6,200 conversions driven in the period.
               </p>
             </div>
             <span style={{ color: '#ff6600', fontSize: '13px', fontWeight: 700 }}>Read Case Study →</span>

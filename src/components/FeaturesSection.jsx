@@ -13,7 +13,7 @@ export default function FeaturesSection() {
     <section className="features">
       <div className="features-container">
         <div className="section-header">
-          <h2 className="section-h2">What Makes <span className="orange">ROI Spectrum</span> Different?</h2>
+          <h2 className="section-h2" style={{ marginTop: '-55px' }}>What Makes <span className="orange">ROI Spectrum</span> Different?</h2>
         </div>
 
         <div className="grid-5">

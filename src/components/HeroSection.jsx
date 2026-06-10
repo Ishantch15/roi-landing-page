@@ -45,14 +45,17 @@ export default function HeroSection({ openModal }) {
 
         {/* Social proof pill */}
         <div style={{
-          display: 'inline-flex',
+          display: 'flex',
           alignItems: 'center',
-          gap: '12px',
+          gap: '8px',
           marginBottom: '40px',
           background: 'rgba(255,102,0,0.08)',
           border: '1px solid rgba(255,102,0,0.25)',
           borderRadius: '9999px',
-          padding: '8px 20px 8px 8px',
+          padding: '8px 16px 8px 8px',
+          maxWidth: '100%',
+          width: 'fit-content',
+          flexWrap: 'nowrap',
         }}>
           {/* Stacked avatars */}
           <div style={{ display: 'flex', alignItems: 'center' }}>
@@ -77,11 +80,12 @@ export default function HeroSection({ openModal }) {
 
           {/* Text */}
           <span className="social-proof-text" style={{
-            fontSize: '17px',
+            fontSize: 'clamp(10px, 3vw, 17px)',
             fontWeight: 600,
             color: '#ff9933',
             fontFamily: 'Arial, sans-serif',
             letterSpacing: '0.1px',
+            lineHeight: 1.3,
           }}>
             125+ Businesses Served In North America, Middle East &amp; Europe
           </span>

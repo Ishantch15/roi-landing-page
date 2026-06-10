@@ -12,7 +12,7 @@ export default function ProcessSection() {
     <section className="process">
       <div className="process-container">
         <div className="section-header">
-          <h2 className="section-h2">What Happens <span className="italic-orange">After You Book?</span></h2>
+          <h2 className="section-h2" style={{ marginTop: '-95px' }}>What Happens <span className="italic-orange">After You Book?</span></h2>
         </div>
 
         <div className="process-grid">
@@ -29,7 +29,7 @@ export default function ProcessSection() {
           <div style={{ flex: '1 1 300px' }}>
             <p style={{ fontSize: '30px', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: '#ff6600', marginBottom: '12px', textAlign: 'left' }}>OUR MISSION</p>
             <p style={{ fontSize: '30px', fontWeight: 700, color: '#1a1a1a', lineHeight: 1.2, textAlign: 'left' }}>
-              To make world-class SEO accessible, transparent, and tailored — for businesses that want to grow without the gimmicks.
+              To make world-class SEO accessible, transparent, and tailored - for businesses that want to grow without the gimmicks.
             </p>
           </div>
           <div style={{ flex: '1 1 300px' }}>

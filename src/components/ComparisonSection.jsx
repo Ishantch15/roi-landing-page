@@ -11,7 +11,7 @@ export default function ComparisonSection() {
     <section className="comparison">
       <div className="comparison-container">
         <div className="section-header">
-          <h2 className="section-h2">Traditional Agencies <span className="italic-orange">vs. ROI Spectrum</span></h2>
+          <h2 className="section-h2" style={{ marginTop: '-55px' }}>Traditional Agencies <span className="italic-orange">vs. ROI Spectrum</span></h2>
         </div>
 
         <div className="comparison-wrapper">

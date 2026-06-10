@@ -6,7 +6,7 @@ export default function CaseStudiesSection() {
       metric: '£5.1M',
       label: 'Attributed Goal Value',
       title: 'personalise-wholesaleblanks.co.uk: £5.1M Goal Value via Technical & Content SEO',
-      desc: 'Technical fixes, entity-rich on-page updates, and internal linking grew organic impressions by +823.99K and clicks by +16.75K — with 6,200 conversions driven in the period.',
+      desc: 'Technical fixes, entity-rich on-page updates, and internal linking grew organic impressions by +823.99K and clicks by +16.75K - with 6,200 conversions driven in the period.',
       href: 'https://roispectrum.com/blogs/seo-case-study-personalise-wholesaleblanks-co-uk',
       // stats: [
       //   { num: '105.9K', label: 'Total Sessions' },
@@ -32,7 +32,7 @@ export default function CaseStudiesSection() {
       metric: '8.2K',
       label: 'Sessions in 8 Months',
       title: 'North County Spa: Zero to 8.2K Organic Sessions in 8 Months',
-      desc: '15 keywords ranking in Google Top 10 and 5.8K engaged sessions with 70%+ engagement rate — all within 8 months of campaign launch.',
+      desc: '15 keywords ranking in Google Top 10 and 5.8K engaged sessions with 70%+ engagement rate - all within 8 months of campaign launch.',
       href: 'https://roispectrum.com/blogs/north-county-spa-8-month-seo-case-study',
       // stats: [
       //   { num: '15', label: 'Top 10 Keywords' },
@@ -60,10 +60,11 @@ export default function CaseStudiesSection() {
       <div className="case-studies-container">
         <div className="case-header">
           <div>
-            <h2 className="section-h2">Case <span className="italic-orange">Studies</span></h2>
+            <h2 className="section-h2" style={{ marginTop: '-55px' }}>Case <span className="italic-orange">Studies</span></h2>
             <p className="section-p" style={{ marginTop: '8px' }}>Real data. Real growth. High-impact results.</p>
           </div>
-          <a href="https://roispectrum.com/blogs" className="case-link" target="_blank" rel="noopener noreferrer">View All Case Studies →</a>
+
+          <a href="https://roispectrum.com/blogs" className="case-link" target="_blank" rel="noopener noreferrer" style={{ alignSelf: 'flex-start', marginTop: '-55px', whiteSpace: 'nowrap', fontSize: 'clamp(13px, 2vw, 16px)' }}>View All Case Studies →</a>
         </div>
 
         <div className="case-cards" style={{ gridTemplateColumns: 'repeat(2, 1fr)' }}>
