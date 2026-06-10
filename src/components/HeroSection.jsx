@@ -32,7 +32,7 @@ export default function HeroSection({ openModal }) {
     <section className="hero">
       <div className="hero-inner">
         <div className="hero-badge">
-          FUTURE-PROOF SEARCH DOMINANCE
+          Verified data-driven results for 100+ brands worldwide
         </div>
 
         <h1 className="hero-h1">
