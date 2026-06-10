@@ -27,7 +27,7 @@ export default function ProcessSection() {
         {/* OUR MISSION */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '60px', marginTop: '80px', flexWrap: 'wrap' }}>
           <div style={{ flex: '1 1 300px' }}>
-            <p style={{ fontSize: '30px', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: '#ff6600', marginBottom: '12px' }}>OUR MISSION</p>
+            <p style={{ fontSize: '30px', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: '#ff6600', marginBottom: '12px', textAlign: 'left' }}>OUR MISSION</p>
             <p style={{ fontSize: '30px', fontWeight: 700, color: '#1a1a1a', lineHeight: 1.2, textAlign: 'left' }}>
               To make world-class SEO accessible, transparent, and tailored — for businesses that want to grow without the gimmicks.
             </p>
@@ -43,7 +43,7 @@ export default function ProcessSection() {
             <img src={valuesImg} alt="Our Values" style={{ width: '100%', borderRadius: '20px', border: '1px solid rgba(255,102,0,0.15)' }} />
           </div>
           <div style={{ flex: '1 1 300px' }}>
-            <p style={{ fontSize: '30px', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: '#ff6600', marginBottom: '12px' }}>OUR VALUES</p>
+            <p style={{ fontSize: '30px', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: '#ff6600', marginBottom: '12px', textAlign: 'left' }}>OUR VALUES</p>
             <p style={{ fontSize: '30px', fontWeight: 700, color: '#1a1a1a', lineHeight: 1.2, textAlign: 'left' }}>
               We believe in transparency, results-driven strategies, and building lasting partnerships that help your business thrive in the digital landscape.
             </p>

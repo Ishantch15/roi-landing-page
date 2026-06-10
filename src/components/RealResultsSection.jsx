@@ -26,7 +26,7 @@ export default function RealResultsSection() {
     <section style={{ background: 'white', padding: '120px 24px' }}>
       <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
         <div className="section-header">
-          <h2 className="section-h2">Real Results. Real Savings </h2>
+          <h2 className="section-h2">Real Results. Real Savings. </h2>
         </div>
 
         <div

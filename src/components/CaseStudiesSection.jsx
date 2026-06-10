@@ -94,7 +94,7 @@ export default function CaseStudiesSection() {
         </div>
         {/* INDUSTRIES */}
         <div style={{ marginTop: '64px' }}>
-          <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, textAlign: 'left', marginBottom: '40px', color: '#1a1a1a' }}>
+          <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 700, textAlign: 'left', marginBottom: '40px', color: '#1a1a1a' }}>
             Industries We've <span style={{ color: '#ff6600' }}>Transformed</span>
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px' }}>

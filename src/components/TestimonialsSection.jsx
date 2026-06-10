@@ -76,8 +76,8 @@ export default function TestimonialsSection() {
     <section className="testimonials">
       <div className="testimonials-container">
         <div className="section-header">
-          <h2 className="section-h2">
-            What Our <span className="orange">Client's Say</span> About Us
+          <h2 className="section-h3">
+            What Our <span className="italic-orange">Client's Say</span> About Us
           </h2>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginTop: '12px', justifyContent: 'center' }}>
             <div style={{ display: 'flex', gap: '4px' }}>

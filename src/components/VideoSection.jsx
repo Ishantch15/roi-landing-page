@@ -26,7 +26,7 @@ export default function VideoSection() {
             letterSpacing: '-1px',
             fontFamily: "Arial,  sans-serif",
           }}>
-            Smarter SEO Real Results
+            Smarter SEO. Real Results.
           </h2>
           <h2 style={{
             fontSize: 'clamp(32px, 5vw, 56px)',

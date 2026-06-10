@@ -1,4 +1,5 @@
 import { Search, Bot, Zap, BarChart2, Settings, Brain } from 'lucide-react';
+import googleVideo from '../assets/Googlevideo.mp4';
 
 export default function ChallengesSection() {
   const challenges = [
@@ -9,19 +10,18 @@ export default function ChallengesSection() {
     { icon: <Settings size={28} />, title: 'Technical Debt', desc: 'Slow page speeds and mobile friction hurting your organic authority.' },
     { icon: <Brain size={28} />, title: 'Semantic Discord', desc: 'Content that fails to answer the user intent that modern LLMs prioritize.' },
   ];
+
   const ticker = 'Plan Winning Strategy ✦ Select ROI Proof Strategies ✦ AI Links Recommendations ✦ AI Mode Simulator ✦ Track Performance ✦ Live Results ✦ Own the Team';
   const repeated = Array(6).fill(ticker).join(' ✦ ');
+
   return (
     <div>
+      {/* Ticker */}
       <div style={{ overflow: 'hidden', background: '#fff', padding: '25px 0', borderTop: '1px solid rgba(255,102,0,0.15)', borderBottom: '1px solid rgba(255,102,0,0.15)', marginTop: '0' }}>
         <style>{`
           @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
         `}</style>
-        <div style={{
-          display: 'flex', whiteSpace: 'nowrap',
-          animation: 'ticker 80s linear infinite',
-          width: 'max-content',
-        }}>
+        <div style={{ display: 'flex', whiteSpace: 'nowrap', animation: 'ticker 80s linear infinite', width: 'max-content' }}>
           {[repeated, repeated].map((t, i) => (
             <span key={i} style={{ fontSize: '20px', fontWeight: 600, color: '#1a1a1a', letterSpacing: '0.5px', paddingRight: '48px' }}>
               {t}
@@ -30,10 +30,46 @@ export default function ChallengesSection() {
         </div>
       </div>
 
-      <section className="challenges">
+      {/* Google I/O Video Section */}
+      <section className="process">
+        <div className="process-container">
+          <div style={{ display: 'flex', alignItems: 'center', gap: '60px', marginTop: '0', flexWrap: 'wrap' }}>
+
+            {/* Left: Text */}
+            <div style={{ flex: '1 1 300px' }}>
+
+              <p style={{ fontSize: '30px', fontWeight: 700, color: '#1a1a1a', lineHeight: 1.2, textAlign: 'left', marginBottom: '20px' }}>
+                Google just announced the biggest overhaul to Search in over 25 years.
+              </p>
+              <p style={{ fontSize: '21px', fontWeight: 400, color: '#1a1a1a', lineHeight: 1.75, textAlign: 'left', margin: 0 }}>
+                At Google I/O 2026, the company announced the biggest overhaul to its search interface in over 25 years, pivoting from a traditional link-based search engine to an <span style={{ color: '#ff6600', fontWeight: 500 }}>agentic, AI-powered system.</span>
+              </p>
+            </div>
+
+            {/* Right: Browser Frame + Video */}
+            <div style={{ flex: '1 1 300px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
+              <video
+                src={googleVideo}
+                autoPlay
+                muted
+                loop
+                playsInline
+                style={{ width: '100%', display: 'block', borderRadius: '20px', border: '1px solid rgba(255,102,0,0.15)' }}
+              />
+              <p style={{ fontSize: '11px', color: '#999', textAlign: 'right', margin: 0 }}>
+                Source: <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" style={{ color: '#999', textDecoration: 'underline' }}>YouTube</a>
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* Challenges Section */}
+      <section className="challenges" style={{ marginTop: '-70px' }}>
         <div className="challenges-container">
           <div className="section-header">
-            <h2 className="section-h2" style={{ textDecoration: 'none' }}>Is Your Website <span className="orange">Costing You</span> Customers?</h2>
+            <h2 className="section-h3" style={{ textDecoration: 'none' }}>Is your Business Ready for <span className="italic-orange">this Change.</span></h2>
             <p className="section-p">Most agencies focus on traffic. We focus on ROI. In the age of AI search, simply "ranking" isn't enough.</p>
           </div>
 

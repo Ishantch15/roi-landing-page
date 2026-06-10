@@ -617,8 +617,16 @@ const styles = `
     color: #1a1a1a;
     margin-bottom: 16px;
     letter-spacing: -0.5px;
+    text-align: left;
   }
-
+.section-h3{
+font-size: 48px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+    // text-align: left;
+}
   @media (min-width: 768px) {
     .section-h2 {
       font-size: 48px;
@@ -630,6 +638,9 @@ const styles = `
   }
 
   .section-h2 .italic-orange {
+    color: #ff6600;
+  }
+  .section-h3 .italic-orange {
     color: #ff6600;
   }
 
@@ -2131,6 +2142,7 @@ const styles = `
   .testimonials-container {
     max-width: 1280px;
     margin: 0 auto;
+    margin-top: -50px;
   }
 
   .carousel-wrapper {

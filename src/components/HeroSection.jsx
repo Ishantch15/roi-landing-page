@@ -34,6 +34,9 @@ export default function HeroSection({ openModal }) {
         <p className="hero-subtitle" style={{ opacity: 1, transform: 'none' }}>
           Traditional SEO is evolving. We help brands master Search Generative Experience and AI-driven discovery to drive high-intent conversion.
         </p>
+        <p className="section-h2-orange" style={{ transform: 'none', color: '#ff6600', marginBottom: '40px', opacity: 1, display: 'block', fontSize: '20px', fontWeight: 500 }}>
+          125+ Businesses Served In North America, Middle East And Europe
+        </p>
 
         <div className="hero-buttons" style={{ opacity: 1, transform: 'none' }}>
           <button className="btn-main" onClick={openModal}>Start Your Free Audit ↗</button>
