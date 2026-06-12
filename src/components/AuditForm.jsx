@@ -127,11 +127,11 @@ export default function AuditForm({ onSubmit }) {
             style={inputStyle('budget')}
           >
             <option value="" disabled>Select your budget range</option>
-            <option value="0-900">$0-$900</option>
-            <option value="900k-2k">$900 – $2,000</option>
-            <option value="2k-5k">$2,000 – $5,000</option>
-            <option value="5k-10k">$5,000 – $10,000</option>
-            <option value="10k+">$10,000+</option>
+            <option value="$0-$900">$0-$900</option>
+            <option value="$900k-$2k">$900 – $2,000</option>
+            <option value="$2k-$5k">$2,000 – $5,000</option>
+            <option value="$5k-$10k">$5,000 – $10,000</option>
+            <option value="$10k+">$10,000+</option>
           </select>
         </div>
         {errors.budget && <span style={{ fontSize: '11px', color: '#ef4444', paddingLeft: '12px' }}>{errors.budget}</span>}
