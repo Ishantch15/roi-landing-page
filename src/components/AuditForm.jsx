@@ -127,7 +127,7 @@ export default function AuditForm({ onSubmit }) {
             style={inputStyle('budget')}
           >
             <option value="" disabled>Select your budget range</option>
-            <option value="₹0-₹25,000">₹0 – ₹25,000</option>
+            <option value="₹10,000-₹25,000">₹10,000 – ₹25,000</option>
             <option value="₹25,000-₹50,000">₹25,000 – ₹50,000</option>
             <option value="₹50,000-₹1,00,000">₹50,000 – ₹1,00,000</option>
             <option value="₹1,00,000+">More than ₹1,00,000</option>
