@@ -46,7 +46,7 @@ export default function Header({ scrollY, mobileMenuOpen, setMobileMenuOpen, ope
             }}
           >
             <Phone size={16} strokeWidth={2} />
-            +91 99887 87151
+            +1 (236) 243-0590
           </a>
           <button className="roi-btn roi-btn-primary" onClick={openModal}>
             Get a Free Audit
@@ -73,7 +73,7 @@ export default function Header({ scrollY, mobileMenuOpen, setMobileMenuOpen, ope
           }}
         >
           <Phone size={16} strokeWidth={2} />
-          +91 99887 87151
+          +1 (236) 243-0590
         </a>
         <button
           className="roi-btn roi-btn-primary"

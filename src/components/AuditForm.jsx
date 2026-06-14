@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const N8N_WEBHOOK_URL = 'https://n8n.srv1484736.hstgr.cloud/webhook/roi-spectrum-audit-indian';
+const N8N_WEBHOOK_URL = 'https://n8n.srv1484736.hstgr.cloud/webhook/roi-spectrum-audit';
 const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycby06t7nAxgb-klUk4SscMzQO5fJStM8U952KHfAa6S1hnGZ3ZeAkeWExLdPabQSm7Hh/exec';
 
 export default function AuditForm({ onSubmit }) {
@@ -127,10 +127,11 @@ export default function AuditForm({ onSubmit }) {
             style={inputStyle('budget')}
           >
             <option value="" disabled>Select your budget range</option>
-            <option value="₹10,000-₹25,000">₹10,000 – ₹25,000</option>
-            <option value="₹25,000-₹50,000">₹25,000 – ₹50,000</option>
-            <option value="₹50,000-₹1,00,000">₹50,000 – ₹1,00,000</option>
-            <option value="₹1,00,000+">More than ₹1,00,000</option>
+            <option value="$00-$900">$0 – $900</option>
+            <option value="$900-$2,000">$900 – $2,000</option>
+            <option value="$2,000-$5,000">$2,000 – $5,000</option>
+            <option value="$5,000-$10,000">$5,000 – $10,000</option>
+            <option value="$10,000+">More than $10,000+</option>
           </select>
         </div>
         {errors.budget && <span style={{ fontSize: '11px', color: '#ef4444', paddingLeft: '12px' }}>{errors.budget}</span>}
